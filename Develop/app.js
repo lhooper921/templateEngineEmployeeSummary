@@ -53,7 +53,6 @@ function startApplication() {
           managerInput.officeNumber,
         )
         employees.push(manager);
-        console.log(manager);
         employeeSelect()
       })
 
