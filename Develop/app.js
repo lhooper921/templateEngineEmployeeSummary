@@ -109,7 +109,7 @@ function startApplication() {
         },
         {
           type: "input",
-          message: "What is the gitHub username  of this Engineer?",
+          message: "What is the gitHub username of this Engineer?",
           name: "github",
         },
 
@@ -120,12 +120,12 @@ function startApplication() {
           engineerInput.name,
           engineerInput.id,
           engineerInput.email,
-          engineerInput.officeNumber,
+          engineerInput.github,
         )
 
         // Add to the team array
         employees.push(engineer);
-        console.log(employees);
+        
 
         // Ask user if they would like to add more employees
         employeeSelect()
@@ -152,7 +152,7 @@ function startApplication() {
         },
         {
           type: "input",
-          message: "What is the school name  of this Intern?",
+          message: "What is the school name of this Intern?",
           name: "school",
         },
         {
@@ -168,12 +168,12 @@ function startApplication() {
               internInput.name,
               internInput.id,
               internInput.email,
-              internInput.officeNumber,
+              internInput.school,
             )
     
             // Add to the team array
             employees.push(intern);
-            console.log(employees);
+            
     
             // Ask user if they would like to add more employees
             employeeSelect()
