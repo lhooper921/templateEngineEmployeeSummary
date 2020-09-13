@@ -7,7 +7,7 @@
 5. [Testing](#testing)
 
 ## Description
-Focusing on object oriented programming, this application takes in user input to create objects. These objects are then rendered and written into an HTML document.
+Focusing on object oriented programming, this application takes in user input to create objects. These objects are then rendered and written into an HTML document. Using the inquirer module, the user is prompted to answer a series of questions regarding the employees within their team. The team is made up of one Manager plus engineers and interns. Each employee type requires unique sets of questions. The answers are displayed on a dynamically generated HTML file.
 
 ## User Story
 As a manager
