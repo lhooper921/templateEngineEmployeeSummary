@@ -1,9 +1,9 @@
 # Template Engine - Employee Summary
 ## Table of Contents
 1. [Description](#description)
-2. [User_Story](#userstory)
-3. [APIs](#APIs)
-4. [Deployed Application](#deployedapplication)
+2. [User Story](#userstory)
+3. [Screenshots](#screenshots)
+4. [Video](#video)
 
 ## Description
 Focusing on object oriented programming, this application takes in user input to create objects. These objects are then rendered and written into an HTML document.
@@ -17,28 +17,15 @@ so that I have quick access to emails and GitHub profiles
 
 ### Main page before searching, previous searches displayed
 
-![Screenshot Main Page](https://github.com/lhooper921/weatherDashboard/blob/master/assets/Screenshots/screenshot1.PNG)
+![Screenshot Main Page](https://github.com/lhooper921/templateEngineEmployeeSummary/blob/master/Assets/Capture.PNG)
 
-### Search for San Diego, unfavorable UV Index
 
-![Screenshot San Diego](https://github.com/lhooper921/weatherDashboard/blob/master/assets/Screenshots/screenshot2.PNG)
+## Video
 
-### Search for Juneau,  moderate UV Index
-
-![Screenshot Juneau](https://github.com/lhooper921/weatherDashboard/blob/master/assets/Screenshots/screenshot3.PNG)
-
-### Search for Norilsk,  favorable UV Index
-
-![Screenshot Norilsk](https://github.com/lhooper921/weatherDashboard/blob/master/assets/Screenshots/screenshot4.PNG)
+<figure class="video_container">
+  <iframe src="https://youtu.be/_4vXYL8dtY0" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 
 
 
-
-
-## APIs
-
-All data was retrieved from the [OpenWeather API](https://openweathermap.org/api)
-
-## Deployed Application
-https://lhooper921.github.io/weatherDashboard/
 
