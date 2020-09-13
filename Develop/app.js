@@ -15,7 +15,173 @@ const Employee = require("./lib/Employee");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
+// store employees in empty team memebrs array, global variables
+let team = []
 
+function startApplication() {
+
+  generateManager()
+  function generateManager() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          message: "What is the name of the Manager?",
+          name: "name"
+        },
+        {
+          type: "input",
+          message: "What is the id of the Manager?",
+          name: "id"
+        },
+        {
+          type: "input",
+          message: "What is the email address of the Manager?",
+          name: "email"
+        },
+        {
+          type: "input",
+          message: "What is the office phone number of the Manager?",
+          name: "officeNumber",
+
+        }])
+      .then((managerInput) => {
+        let manager = new Manager(
+          managerInput.name,
+          managerInput.id,
+          managerInput.email,
+          managerInput.officeNumber,
+        )
+        team.push(manager);
+        console.log(manager);
+        employeeSelect()
+      })
+
+
+
+  };
+  function employeeSelect() {
+    inquirer
+      .prompt([
+        {
+          type: "list",
+          message: "What type of employee would you like to add?",
+          name: "preference",
+          choices: ["Engineer", "Intern", "No more Employees to add"]
+        }
+      ])
+      .then((userInput) => {
+        switch (userInput.preference) {
+          case 'Engineer':
+            generateEngineer();
+            break;
+          case 'Intern':
+            generateIntern();
+            break;
+          
+           
+          default:
+            console.log("Team complete!");
+        }
+
+
+      })
+  }
+
+  function generateEngineer() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          message: "What is the name of this Engineer?",
+          name: "name"
+        },
+        {
+          type: "input",
+          message: "What is the id of this Engineer?",
+          name: "id"
+        },
+        {
+          type: "input",
+          message: "What is the email address of this Engineer?",
+          name: "email"
+        },
+        {
+          type: "input",
+          message: "What is the gitHub username  of this Engineer?",
+          name: "github",
+        },
+
+      ])
+      // Use answers to create new Engineer object
+      .then((engineerInput) => {
+        let engineer = new Engineer(
+          engineerInput.name,
+          engineerInput.id,
+          engineerInput.email,
+          engineerInput.officeNumber,
+        )
+
+        // Add to the team array
+        team.push(engineer);
+        console.log(team);
+
+        // Ask user if they would like to add more employees
+        employeeSelect()
+      })
+  }
+
+  function generateIntern() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          message: "What is the name of this Intern?",
+          name: "name"
+        },
+        {
+          type: "input",
+          message: "What is the id of this Intern?",
+          name: "id"
+        },
+        {
+          type: "input",
+          message: "What is the email address of this Intern?",
+          name: "email"
+        },
+        {
+          type: "input",
+          message: "What is the school name  of this Intern?",
+          name: "school",
+        },
+        {
+          type: "checkbox",
+          message: "What type of employee would you like to add?",
+          name: "preference",
+          choices: ["Engineer", "Intern", "No more Employees to add"]
+        }
+      ])
+           // Use answers to create new Engineer object
+           .then((internInput) => {
+            let intern = new Intern(
+              internInput.name,
+              internInput.id,
+              internInput.email,
+              internInput.officeNumber,
+            )
+    
+            // Add to the team array
+            team.push(intern);
+            console.log(team);
+    
+            // Ask user if they would like to add more employees
+            employeeSelect()
+          })
+
+  }
+}
+
+startApplication()
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
