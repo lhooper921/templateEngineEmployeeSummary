@@ -22,10 +22,7 @@ so that I have quick access to emails and GitHub profiles
 
 ## Video
 
-<figure class="video_container">
-  <iframe src="https://youtu.be/_4vXYL8dtY0" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-
+[![Application](http://img.youtube.com/vi/_4vXYL8dtY0/0.jpg)](http://www.youtube.com/watch?v=_4vXYL8dtY0 "Employee Summary Video Capture")
 
 
 
